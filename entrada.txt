@@ -1,0 +1,4 @@
+int suma = 5;
+if (suma > 3) {
+    print("Mayor");
+}
