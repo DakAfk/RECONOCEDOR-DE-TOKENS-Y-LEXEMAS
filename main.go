@@ -228,3 +228,5 @@ func generarReporte(tokens []Token, conteo map[TokenType]int) {
 	writer.Flush()
 	fmt.Println("✅ Reporte generado en Salida.txt")
 }
+
+//fffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
