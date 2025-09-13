@@ -9,3 +9,11 @@ Validar que el archivo se procese correctamente desde la ubicación especificada
 # Clasificación de Cadenas y Reconocimiento de Tokens 
 Implementar el análisis léxico con Go.Identificar palabras reservadas, variables, operadores, signos de agrupación y errores. 
 Registrar línea y columna de errores.
+
+
+# Generación de Reportes
+
+Creación del archivo Salida.txt, donde se almacena el resultado del análisis léxico.
+El reporte incluye:
+📌 La lista de tokens identificados (con su línea, columna, tipo y lexema).
+📌 Una tabla de conteo por tipo de token al final del archivo.
