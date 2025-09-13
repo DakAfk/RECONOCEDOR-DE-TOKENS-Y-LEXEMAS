@@ -188,4 +188,43 @@ func leerArchivo(ruta string) {
 	for _, tipo := range tipos {
 		fmt.Printf("%-22s : %d\n", tipo, conteo[tipo])
 	}
+
+	// Generar archivo de salida
+	generarReporte(todosTokens, conteo)
+
+}
+
+// Genera el archivo de salida con los tokens y el conteo
+func generarReporte(tokens []Token, conteo map[TokenType]int) {
+	archivo, err := os.Create("Salida.txt")
+	if err != nil {
+		fmt.Println("❌ Error al crear Salida.txt:", err)
+		return
+	}
+	defer archivo.Close()
+
+	writer := bufio.NewWriter(archivo)
+
+	// Encabezado
+	writer.WriteString("===== REPORTE DE TOKENS Y LEXEMAS =====\n\n")
+
+	// Listado de tokens
+	for _, t := range tokens {
+		writer.WriteString(fmt.Sprintf("[Línea %d, Col %d] %-22s : %s\n",
+			t.Linea, t.Columna, t.Tipo, t.Lexema))
+	}
+
+	writer.WriteString("\n===== TABLA DE CONTEO POR TIPO DE TOKEN =====\n")
+	tipos := []TokenType{}
+	for tipo := range conteo {
+		tipos = append(tipos, tipo)
+	}
+	sort.Slice(tipos, func(i, j int) bool { return string(tipos[i]) < string(tipos[j]) })
+
+	for _, tipo := range tipos {
+		writer.WriteString(fmt.Sprintf("%-22s : %d\n", tipo, conteo[tipo]))
+	}
+
+	writer.Flush()
+	fmt.Println("✅ Reporte generado en Salida.txt")
 }

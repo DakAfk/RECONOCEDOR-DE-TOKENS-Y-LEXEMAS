@@ -1,0 +1,29 @@
+===== REPORTE DE TOKENS Y LEXEMAS =====
+
+[Línea 1, Col 1] Variable               : int
+[Línea 1, Col 5] Variable               : suma
+[Línea 1, Col 10] Operador               : =
+[Línea 1, Col 12] Número                 : 5
+[Línea 1, Col 13] Signo de Agrupación    : ;
+[Línea 2, Col 1] Palabra Reservada      : if
+[Línea 2, Col 4] Signo de Agrupación    : (
+[Línea 2, Col 5] Variable               : suma
+[Línea 2, Col 10] Operador               : >
+[Línea 2, Col 12] Número                 : 3
+[Línea 2, Col 13] Signo de Agrupación    : )
+[Línea 2, Col 15] Signo de Agrupación    : {
+[Línea 3, Col 5] Variable               : print
+[Línea 3, Col 10] Signo de Agrupación    : (
+[Línea 3, Col 11] Signo de Agrupación    : "
+[Línea 3, Col 12] Variable               : Mayor
+[Línea 3, Col 17] Signo de Agrupación    : "
+[Línea 3, Col 18] Signo de Agrupación    : )
+[Línea 3, Col 19] Signo de Agrupación    : ;
+[Línea 4, Col 1] Signo de Agrupación    : }
+
+===== TABLA DE CONTEO POR TIPO DE TOKEN =====
+Número                 : 2
+Operador               : 2
+Palabra Reservada      : 1
+Signo de Agrupación    : 10
+Variable               : 5
