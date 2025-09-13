@@ -15,5 +15,7 @@ Registrar línea y columna de errores.
 
 Creación del archivo Salida.txt, donde se almacena el resultado del análisis léxico.
 El reporte incluye:
+
 📌 La lista de tokens identificados (con su línea, columna, tipo y lexema).
+
 📌 Una tabla de conteo por tipo de token al final del archivo.
